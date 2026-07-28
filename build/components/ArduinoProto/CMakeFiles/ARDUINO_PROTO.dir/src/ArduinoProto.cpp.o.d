@@ -1,5 +1,0 @@
-components/ArduinoProto/CMakeFiles/ARDUINO_PROTO.dir/src/ArduinoProto.cpp.o: \
- /home/fakys/projects/arduino/components/ArduinoProto/src/ArduinoProto.cpp \
- /home/fakys/projects/arduino/components/ArduinoProto/includes/ArduinoProto.h \
- /home/fakys/projects/arduino/components/ArduinoProto/includes/MessageForProto.h \
- /home/fakys/projects/arduino/include/main.h

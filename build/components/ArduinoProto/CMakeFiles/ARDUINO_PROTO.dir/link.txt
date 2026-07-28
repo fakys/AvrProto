@@ -1,2 +1,0 @@
-/usr/bin/ar qc libARDUINO_PROTO.a CMakeFiles/ARDUINO_PROTO.dir/src/ArduinoProto.cpp.o CMakeFiles/ARDUINO_PROTO.dir/src/MessageProto.cpp.o
-/usr/bin/ranlib libARDUINO_PROTO.a

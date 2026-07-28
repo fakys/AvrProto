@@ -1,1 +1,0 @@
-g++ CMakeFiles/arduino.dir/main.cpp.o -o arduino  components/avr_proto/libAVR_PROTO.a 
