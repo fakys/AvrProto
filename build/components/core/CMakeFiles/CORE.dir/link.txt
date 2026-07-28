@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCORE.a CMakeFiles/CORE.dir/src/AvrArray.cpp.o CMakeFiles/CORE.dir/exceptions/InvalidSizeFormatException.h.o
+/usr/bin/ranlib libCORE.a

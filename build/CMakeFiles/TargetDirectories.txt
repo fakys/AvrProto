@@ -1,0 +1,8 @@
+/home/fakys/projects/arduino/build/CMakeFiles/arduino.dir
+/home/fakys/projects/arduino/build/CMakeFiles/edit_cache.dir
+/home/fakys/projects/arduino/build/CMakeFiles/rebuild_cache.dir
+/home/fakys/projects/arduino/build/components/core/CMakeFiles/edit_cache.dir
+/home/fakys/projects/arduino/build/components/core/CMakeFiles/rebuild_cache.dir
+/home/fakys/projects/arduino/build/components/avr_proto/CMakeFiles/AVR_PROTO.dir
+/home/fakys/projects/arduino/build/components/avr_proto/CMakeFiles/edit_cache.dir
+/home/fakys/projects/arduino/build/components/avr_proto/CMakeFiles/rebuild_cache.dir

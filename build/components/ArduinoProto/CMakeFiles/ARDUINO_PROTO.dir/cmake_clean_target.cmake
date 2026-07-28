@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libARDUINO_PROTO.a"
+)

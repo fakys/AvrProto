@@ -1,0 +1,2 @@
+/usr/bin/ar qc libARDUINO_USARTI_INTERFACE.a CMakeFiles/ARDUINO_USARTI_INTERFACE.dir/src/UsartInterface.cpp.o
+/usr/bin/ranlib libARDUINO_USARTI_INTERFACE.a

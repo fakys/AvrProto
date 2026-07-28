@@ -1,0 +1,30 @@
+//
+// Created by fakys on 26.07.2026.
+//
+
+#ifndef ARDUINO_CONTENTBODY_H
+#define ARDUINO_CONTENTBODY_H
+
+#include "MessageContentInterface.h"
+#include "proto.h"
+
+class ContentBody : public MessageContentInterface {
+public:
+    unsigned int getPositionIndex() override {
+        return B_CONTENT_INDEX;
+    }
+
+    unsigned int getSize() override {
+        auto* size = (BodySize*)(*this->dependsContent)[B_SIZE_INDEX];
+
+        //todo тут бы придумать универсальный метод
+        return (unsigned int)((uint16_t)(*size->getData())[0] << 8 | (*size->getData())[1]);
+    }
+
+    AvrArray<unsigned int> *getDependenciesContentIndex() {
+        auto* index = new unsigned int[B_SIZE_INDEX];
+        return new AvrArray<unsigned int>(index, 1);
+    }
+};
+
+#endif //ARDUINO_CONTENTBODY_H

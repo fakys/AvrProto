@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libAVR_PROTO.a"
+)

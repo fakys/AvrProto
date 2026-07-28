@@ -1,0 +1,24 @@
+add_library(
+        CORE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/proto/ProtoDevice.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/proto/tunnel/ArvProtoTunnel.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/proto/tunnel/ArvProtoTunnelController.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/sender/transactions/SenderTransaction.cpp
+)
+
+target_include_directories(
+        CORE
+        PUBLIC
+        ${CMAKE_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/exceptions
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/proto
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/proto/tunnel
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/proto/tunnel/exceptions
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/proto/message
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/proto/message/header_content
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/proto/message/content_body
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/sender/transactions
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/sender
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/sender/exceptions
+)
