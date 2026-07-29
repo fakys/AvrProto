@@ -1,8 +1,7 @@
 #ifndef ARDUINO_PROTOMESSAGE_H
 #define ARDUINO_PROTOMESSAGE_H
 
-#include <cstdint>
-
+#include "main.h"
 #include "AvrArray.h"
 #include "ProtoBody.h"
 #include "ProtoHeader.h"

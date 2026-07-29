@@ -7,16 +7,28 @@ class ProtoBody {
     private:
         BodySize* body_size;
         ContentBody* content_body;
+
+        //Хранит в себе уже сортированный контент
+        AvrArray<MessageContentInterface*>* sortContent;
     public:
-        ProtoBody(BodySize* body_size) {
-            this->body_size = body_size;
+        ProtoBody() {
+            this->sortContent = new AvrArray<MessageContentInterface*>();
+
+            this->body_size = new BodySize();
+            this->sortContent->push(this->body_size, this->body_size->getPositionIndex());
             this->content_body = new ContentBody();
+            this->sortContent->push(this->content_body, this->content_body->getPositionIndex());
         }
         BodySize* getBodySize() {
             return this->body_size;
         }
+
         ContentBody* getContentBody() {
             return this->content_body;
+        }
+
+        AvrArray<MessageContentInterface*>* getSortContent() {
+            return this->sortContent;
         }
 };
 

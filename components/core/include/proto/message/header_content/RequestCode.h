@@ -1,7 +1,6 @@
 #ifndef ARDUINO_REQUESTCODE_H
 #define ARDUINO_REQUESTCODE_H
 
-#include "ArduProtoV1.h"
 #include "MessageContentInterface.h"
 
 class RequestCode : public MessageContentInterface {
@@ -12,6 +11,15 @@ public:
     unsigned int getSize() override {
         return H_BYTE_FOR_REQUEST_CODE;
     }
+
+    bool validData(uint8_t byte) override {
+        //todo Проверять на все известные коды
+        return !this->filled();
+    };
+
+    bool filled() override {
+        return this->data->getSize() == this->getSize();
+    };
 };
 
 #endif

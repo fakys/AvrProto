@@ -2,7 +2,6 @@
 #define ARDUINO_TUNNELID_H
 
 #include "MessageContentInterface.h"
-#include "ArduProtoV1.h"
 
 class TunnelId : public MessageContentInterface {
 public:
@@ -12,6 +11,14 @@ public:
     unsigned int getSize() override {
         return H_BYTE_FOR_TUNNEL_ID;
     }
+
+    bool validData(uint8_t byte) override {
+        return !this->filled();
+    };
+
+    bool filled() override {
+        return this->data->getSize() == this->getSize();
+    };
 };
 
 #endif

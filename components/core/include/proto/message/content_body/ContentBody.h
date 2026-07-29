@@ -25,6 +25,14 @@ public:
         auto* index = new unsigned int[B_SIZE_INDEX];
         return new AvrArray<unsigned int>(index, 1);
     }
+
+    bool validData(uint8_t byte) override {
+        return !this->filled();
+    };
+
+    bool filled() override {
+        return this->data->getSize() == this->getSize();
+    };
 };
 
 #endif //ARDUINO_CONTENTBODY_H

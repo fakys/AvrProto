@@ -7,6 +7,9 @@
 
 #define DEFAULT_CAPACITY 1
 
+//Максимальная кратность в байтах
+#define MAX_DISCHARGE 2
+
 #include "proto.h"
 
 #ifdef X86_ARCHITECTURE

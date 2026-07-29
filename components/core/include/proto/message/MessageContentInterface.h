@@ -13,17 +13,24 @@ class MessageContentInterface {
     AvrArray<MessageContentInterface*>* dependsContent;
   public:
 
-  MessageContentInterface() {}
+  MessageContentInterface() {
+    this->data = new AvrArray<uint8_t>();
+  }
   virtual unsigned int getPositionIndex();
   virtual unsigned int getSize();
 
-  void setData (AvrArray<uint8_t>* d) {
-    this->data = d;
+  virtual void appendData (uint8_t byte) {
+    this->data->push(byte);
   }
-  AvrArray<uint8_t>* getData() {
+
+  virtual AvrArray<uint8_t>* getData() {
     return data;
   }
-  ~MessageContentInterface() {
+
+  virtual bool validData(uint8_t byte);
+  virtual bool filled();
+
+  virtual ~MessageContentInterface() {
     delete data;
   }
 

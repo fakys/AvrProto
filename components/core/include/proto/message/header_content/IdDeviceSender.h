@@ -1,7 +1,6 @@
 #ifndef ARDUINO_IDDEVICESENDER_H
 #define ARDUINO_IDDEVICESENDER_H
 
-#include "ArduProtoV1.h"
 #include "MessageContentInterface.h"
 
 class IdDeviceSender : public MessageContentInterface {
@@ -12,6 +11,14 @@ public:
     unsigned int getSize() override {
         return H_BYTE_FOR_ID_SENDER;
     }
+
+    bool validData(uint8_t byte) override {
+        return !this->filled();
+    };
+
+    bool filled() override {
+        return this->data->getSize() == this->getSize();
+    };
 };
 
 #endif
