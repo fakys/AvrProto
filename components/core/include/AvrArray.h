@@ -63,7 +63,10 @@ public:
             this->avrArray[this->size] = data;
         }
 
-        if (!index || index >= this->size) {
+        if (!index) {
+            this->size++;
+        } else if (index >= this->size) { // тут сомневась, мб надо будет убрать
+            this->size = index;
             this->size++;
         }
     };

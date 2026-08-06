@@ -16,7 +16,22 @@ public:
         this->body = body;
     };
 
-    AvrArray<uint8_t>* toByte();
+    AvrArray<uint8_t>* toByte() {
+        auto* byte_message = new AvrArray<uint8_t>();
+
+        for (int i = 1; i < this->getHeader()->getSortContent()->getSize(); i++) {
+            byte_message->merge((*this->getHeader()->getSortContent())[i]->getData());
+        }
+
+        // std::cout << (*this->getHeader()->getSortContent())[4]->getData() << std::endl;
+
+
+        for (int i = 1; i < this->getBody()->getSortContent()->getSize(); i++) {
+            byte_message->merge((*this->getBody()->getSortContent())[i]->getData());
+        }
+
+        return byte_message;
+    };
 
     ProtoHeader* getHeader() {
         return header;

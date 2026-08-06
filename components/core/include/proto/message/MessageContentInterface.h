@@ -15,9 +15,14 @@ class MessageContentInterface {
 
   MessageContentInterface() {
     this->data = new AvrArray<uint8_t>();
+    this->dependsContent = new AvrArray<MessageContentInterface*>();
   }
-  virtual unsigned int getPositionIndex();
-  virtual unsigned int getSize();
+  virtual unsigned int getPositionIndex() {
+    return 0;
+  };
+  virtual unsigned int getSize() {
+    return 0;
+  };
 
   virtual void appendData (uint8_t byte) {
     this->data->push(byte);
@@ -27,19 +32,21 @@ class MessageContentInterface {
     return data;
   }
 
-  virtual bool validData(uint8_t byte);
-  virtual bool filled();
+  virtual bool validData(uint8_t byte) {
+    return false;
+  };
+
+  virtual bool filled() {
+    return false;
+  };
 
   virtual ~MessageContentInterface() {
     delete data;
   }
 
-  AvrArray<unsigned int> *getDependenciesContentIndex() {
-    return nullptr;
-  }
 
-  void setDependenciesContent(AvrArray<MessageContentInterface*> * depends) {
-    this->dependsContent = depends;
+  void appendDependenciesContent(MessageContentInterface* depends) {
+    (*this->dependsContent)[depends->getPositionIndex()] = depends;
   }
 };
 

@@ -5,7 +5,7 @@
 #include "SendMessageDto.h"
 #include "MessageReaderContext.h"
 
-class ArvProto {
+class ArvProto : public Singleton<ArvProto> {
 public:
     ProtoMessage* messageToProto(SendMessageDto* dto);
     MessageReaderContext* createMessageReaderContext(SenderInterface* sender);

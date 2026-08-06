@@ -14,6 +14,7 @@
 
 #ifdef X86_ARCHITECTURE
 #include <iostream>
+#include <cstdint>
 #elifdef AVR_ARCHITECTURE
 #include <avr/io.h>
 #include <util/delay.h>

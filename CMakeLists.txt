@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.28)
-project(arduino)
+project(avr_proto)
 
 set(CMAKE_C_COMPILER avr-gcc)
 set(MCU atmega328p)
 set(F_CPU 16000000UL)
 
 #x86 или AVR
-set(ARCHITECTURE_NAME AVR)
+set(ARCHITECTURE_NAME x86)
 
 
 if (ARCHITECTURE_NAME STREQUAL "x86")
@@ -19,6 +19,7 @@ elseif (ARCHITECTURE_NAME STREQUAL "AVR")
     set(CMAKE_ASM_COMPILER avr-gcc)
     set(CMAKE_OBJCOPY avr-objcopy)
     set(CMAKE_SIZE avr-size)
+    set(USE_UART 1)
 
     add_definitions(-D__AVR_ATmega328P__=1)
     add_definitions(-DF_CPU=16000000UL)

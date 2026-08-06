@@ -12,10 +12,12 @@ class Singleton {
   public:
     static T* find() {
       if (!object) {
-        object = new T;
+        object = new T();
       }
       return object;
     };
 };
 
+template<typename T>
+T* Singleton<T>::object = nullptr;
 #endif //ARDUINO_SINGLETON_H

@@ -21,11 +21,6 @@ public:
         return (unsigned int)((uint16_t)(*size->getData())[0] << 8 | (*size->getData())[1]);
     }
 
-    AvrArray<unsigned int> *getDependenciesContentIndex() {
-        auto* index = new unsigned int[B_SIZE_INDEX];
-        return new AvrArray<unsigned int>(index, 1);
-    }
-
     bool validData(uint8_t byte) override {
         return !this->filled();
     };

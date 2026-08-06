@@ -6,7 +6,6 @@
 #define ARDUINO_AVRUSBSENDER_H
 #include "SenderTransaction.h"
 #include "Singleton.h"
-#include <avr/io.h>
 
 class UartSender : public SenderInterface, public Singleton<UartSender> {
 public:

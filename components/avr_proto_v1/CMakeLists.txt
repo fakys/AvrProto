@@ -1,6 +1,7 @@
 add_library(
         AVR_PROTO
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/AvrProto.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/AvrProtoV1.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/MessageReaderContextV1.cpp
 )
 
 target_link_libraries(AVR_PROTO PUBLIC CORE)

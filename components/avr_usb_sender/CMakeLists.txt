@@ -1,6 +1,11 @@
+if (USE_UART)
+    set(UART_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/AvrUartSender.cpp)
+endif ()
+
 add_library(
         AVR_USB_SENDER
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/AvrUartSender.cpp
+        ${UART_FILES}
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/X86UsbSender.cpp
 )
 
 

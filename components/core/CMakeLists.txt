@@ -4,7 +4,6 @@ add_library(
         ${CMAKE_CURRENT_SOURCE_DIR}/src/proto/tunnel/ArvProtoTunnel.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/proto/tunnel/ArvProtoTunnelController.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/sender/transactions/SenderTransaction.cpp
-        ${CMAKE_CURRENT_SOURCE_DIR}/src/proto/MessageReaderContext.cpp
 )
 
 target_include_directories(

@@ -5,7 +5,7 @@
 #ifndef ARDUINO_SENDERINTERFACE_H
 #define ARDUINO_SENDERINTERFACE_H
 #include "Singleton.h"
-#include <avr/io.h>
+#include "main.h"
 
 class SenderInterface : public Singleton<SenderInterface> {
     public:

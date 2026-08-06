@@ -16,6 +16,7 @@ class SendMessageDto {
         this->code = code;
         this->id_recipient = id_recipient;
         this->message = message;
+        this->id_sender = id_sender;
     }
 
     AvrArray<uint8_t>* getMessage() {
@@ -32,6 +33,10 @@ class SendMessageDto {
 
     uint8_t getTunnelId() {
         return tunnel_id;
+    }
+
+    uint8_t getCode() {
+        return code;
     }
 };
 
