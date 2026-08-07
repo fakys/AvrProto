@@ -38,6 +38,11 @@ class SendMessageDto {
     uint8_t getCode() {
         return code;
     }
+
+    ~SendMessageDto() {
+        message->clear();
+        delete message;
+    }
 };
 
 #endif

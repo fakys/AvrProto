@@ -36,6 +36,11 @@ public:
     bool filled() override {
         return this->data->getNumber()->getSize() == this->data->getDischarge();
     };
+
+    ~HeaderSize() {
+        data->clear();
+        delete data;
+    }
 };
 
 #endif

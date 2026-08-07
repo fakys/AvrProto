@@ -30,6 +30,12 @@ class ProtoBody {
         AvrArray<MessageContentInterface*>* getSortContent() {
             return this->sortContent;
         }
+        ~ProtoBody() {
+            this->sortContent->clear();
+            delete this->sortContent;
+            delete this->body_size;
+            delete this->content_body;
+        }
 };
 
 #endif

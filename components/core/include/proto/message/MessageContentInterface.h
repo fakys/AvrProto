@@ -41,7 +41,10 @@ class MessageContentInterface {
   };
 
   virtual ~MessageContentInterface() {
+    data->clear();
+    this->dependsContent->clear();
     delete data;
+    delete this->dependsContent;
   }
 
 

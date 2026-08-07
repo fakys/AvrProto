@@ -44,6 +44,14 @@ public:
     AvrArray<uint8_t> *getNumber() {
         return this->num;
     }
+
+    void clear() {
+        this->num->clear();
+    }
+
+    ~ByteNumeric() {
+        delete this->num;
+    }
 };
 
 #endif //ARDUINO_BYTENUMERIC_H

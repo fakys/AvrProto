@@ -37,6 +37,11 @@ public:
     bool filled() override {
         return this->data->getNumber()->getSize() == this->data->getDischarge();
     };
+
+    ~BodySize() {
+        data->clear();
+        delete data;
+    }
 };
 
 #endif //ARDUINO_BODYSIZE_H

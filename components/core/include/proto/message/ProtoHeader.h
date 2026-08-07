@@ -54,6 +54,23 @@ class ProtoHeader {
     AvrArray<MessageContentInterface*>* getSortContent() {
         return this->sortContent;
     }
+
+    ~ProtoHeader() {
+        this->sortContent->clear();
+        delete this->sortContent;
+        delete this->header_size;
+        delete this->id_device_recipient;
+        delete this->tunnel_id;
+        delete this->id_device_sender;
+        delete this->request_code;
+
+        this->sortContent = nullptr;
+        this->header_size = nullptr;
+        this->id_device_recipient = nullptr;
+        this->tunnel_id = nullptr;
+        this->id_device_sender = nullptr;
+        this->request_code = nullptr;
+    }
 };
 
 #endif

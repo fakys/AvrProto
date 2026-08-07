@@ -14,3 +14,8 @@ cd ./build && make
 ```
 avrdude -c arduino -p m328p -P /dev/ttyUSB0 -U flash:w:avr_proto.hex:i
 ```
+
+#### Для дебага 
+```
+valgrind --leak-check=full ./путь к файлу
+```
