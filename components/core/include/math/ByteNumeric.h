@@ -37,7 +37,7 @@ public:
         }
 
         for (unsigned int y = 0; y < this->discharge; y++) {
-            this->num->push(byte, this->discharge - y);
+            this->num->push(byte, this->discharge - 1 - y);
         }
     }
 

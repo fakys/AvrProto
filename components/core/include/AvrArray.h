@@ -62,13 +62,8 @@ public:
         } else {
             this->avrArray[this->size] = data;
         }
-
-        if (!index) {
-            this->size++;
-        } else if (index >= this->size) { // тут сомневась, мб надо будет убрать
-            this->size = index;
-            this->size++;
-        }
+        //todo Тут надо что-то с индексами придумать, возможно каждый индекс в массив писать
+        this->size++;
     };
 
     void merge(AvrArray<T>* other) {

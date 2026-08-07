@@ -54,10 +54,10 @@
 //Колличиство байт для указания размера в теле
 #define B_BYTE_FOR_SIZE 2
 //Порядковый номер в запросе
-#define B_SIZE_INDEX 1
+#define B_SIZE_INDEX 0
 
 //Порядковый номер
-#define B_CONTENT_INDEX 2
+#define B_CONTENT_INDEX 1
 
 
 

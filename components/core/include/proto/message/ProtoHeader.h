@@ -21,6 +21,9 @@ class ProtoHeader {
         this->sortContent = new AvrArray<MessageContentInterface*>();
 
         this->header_size = new HeaderSize();
+        //todo Временно
+        this->header_size->appendData(4);
+
         this->sortContent->push(this->header_size, this->header_size->getPositionIndex());
         this->id_device_recipient = new IdDeviceRecipient();
         this->sortContent->push(this->id_device_recipient, this->id_device_recipient->getPositionIndex());
